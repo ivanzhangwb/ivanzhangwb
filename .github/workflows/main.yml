@@ -9,6 +9,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: ${{ github.event.inputs.hugoVersion || '0.124.1' }}
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
