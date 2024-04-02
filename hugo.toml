@@ -1,0 +1,4 @@
+baseURL = 'http://www.zhangwb.cn'
+languageCode = 'en-us'
+title = '纹波的独立小站'
+theme = 'PaperMod'
