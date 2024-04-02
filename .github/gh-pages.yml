@@ -1,0 +1,39 @@
+name: GitHub Pages
+
+on:
+  push:
+    branches:
+      - master  # Set a branch to deploy
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.124.1'
+          extended: true
+
+      - name: Build
+        run: hugo --minify
+
+
+      - name: Deploy
+        uses: burnett01/rsync-deployments@5.2
+        with:
+          switches: -avzr --delete
+          path: ./public
+          remote_path: /home/admin/zhangwb/public # 需要先手动在远程主机创建该目录，否则会执行失败
+          remote_host: ${{ secrets.DELPY_HOST }} # 远程主机 IP
+          remote_port: 22  # ssh 端口，默认为 22
+          remote_user: ${{ secrets.DELPY_USER }} # ssh user
+          remote_key: ${{ secrets.DELPY_KEY }} # ssh 私钥
