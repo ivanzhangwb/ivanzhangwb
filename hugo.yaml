@@ -1,0 +1,58 @@
+baseURL : http://www.zhangwb.cn
+languageCode : 'en-us'
+title : '纹波独立站'
+theme : 'PaperMod'
+enableEmoji : true
+disableThemeToggle: true
+searchHidden: true
+
+menu:
+  main:
+    - name: 搜索
+      url: search/
+      weight: 10
+    - name: 归档
+      url: archives
+      weight: 5
+    - name: 关于  
+      url: about/
+      weight: 10
+
+
+    # - name: WiKi
+      # url: https://github.com/adityatelange/hugo-PaperMod/wiki/
+
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
+    
+params:
+  # ShowShareButtons: true
+  # ShowReadingTime: true
+  ShowBreadCrumbs: true  
+  ShowPostNavLinks: true  
+  ShowCodeCopyButtons: true  
+  ShowWordCount: true
+  # author: ["纹波"]  
+  # profileMode:
+  #   enabled: true
+  #   title: "<Title>" # optional default will be site title
+  #   subtitle: "This is subtitle"
+  #   imageUrl: "<image link>" # optional
+  #   imageTitle: "<title of image as alt>" # optional
+  #   imageWidth: 120 # custom size
+  #   imageHeight: 120 # custom size
+  #   buttons:
+  #     - name: Archive
+  #       url: "/archive"
+  #     - name: Github
+  #       url: "https://github.com/"
+
+  socialIcons: # optional
+    - name: "x"
+      url: "https://x.com"
+    # - name: "<platform 2>"
+    #   url: "<link2>"
