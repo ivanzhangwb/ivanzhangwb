@@ -36,12 +36,12 @@ jobs:
       - name: Echo ENV 
         run: echo "${{ secrets.DELPY_KEY }}"
       - name: DeployToAliyun
-        uses: AEnterprise/rsync-deploy@v1.0 # 使用别人包装好的步骤镜像
-        env:
-          DEPLOY_KEY: ${{ secrets.DELPY_KEY }} # 引用配置，SSH私钥
-          ARGS: -avz --delete  
-          SERVER_PORT: "22" # SSH端口
-          FOLDER: ./public # 要推送的文件夹，路径相对于代码仓库的根目录，视情况替换为自己的文件夹路径
-          SERVER_IP: ${{ secrets.DELPY_HOST }} # 引用配置，服务器的host名（IP或者域名domain.com）
-          USERNAME: admin # 引用配置，服务器登录名
-          SERVER_DESTINATION: /home/admin/zhangwb/public  # 部署到目标文件夹
+        uses: burnett01/rsync-deployments@7.0.1
+        with:
+          switches: -avzr --delete
+          path: ./public
+          remote_path: /home/admin/zhangwb/public # 需要先手动在远程主机创建该目录，否则会执行失败
+          remote_host: ${{ secrets.DELPY_HOST }} # 远程主机 IP
+          remote_port: 22  # ssh 端口，默认为 22
+          remote_user: ${{ secrets.DELPY_USER }} # ssh user
+          remote_key: ${{ secrets.DELPY_KEY }} # ssh 私钥
