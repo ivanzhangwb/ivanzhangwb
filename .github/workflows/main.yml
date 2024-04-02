@@ -40,7 +40,7 @@ jobs:
         with:
           switches: -avzr --delete
           path: ./public
-          remote_path: /home/admin/zhangwb/public # 需要先手动在远程主机创建该目录，否则会执行失败
+          remote_path: /home/admin/zhangwb/ # 需要先手动在远程主机创建该目录，否则会执行失败
           remote_host: ${{ secrets.DELPY_HOST }} # 远程主机 IP
           remote_port: 22  # ssh 端口，默认为 22
           remote_user: ${{ secrets.DELPY_USER }} # ssh user
