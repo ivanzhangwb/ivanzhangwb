@@ -33,7 +33,8 @@ jobs:
         run: |
           hugo \
             --buildDrafts --gc 
-
+      - name: Echo ENV 
+        run: echo "${{ secrets.DELPY_KEY }}"
       - name: DeployToAliyun
         uses: burnett01/rsync-deployments@5.2
         with:
