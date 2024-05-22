@@ -32,7 +32,7 @@ jobs:
       - name: Build with Hugo
         run: |
           hugo \
-            --buildDrafts --gc 
+            --gc 
       - name: Echo ENV 
         run: echo "${{ secrets.DELPY_KEY }}"
       - name: DeployToAliyun
