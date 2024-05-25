@@ -1,0 +1,36 @@
+baseURL : http://www.zhangwb.cn
+buildDrafts: false
+title : '纹波独立站'
+theme : 'PaperMod'
+enableEmoji : true
+searchHidden: true
+
+menu:
+  main:
+    - name: 跑步日记
+      url: https://running-page-zeta.vercel.app/
+      weight: 7
+    - name: 归档
+      url: archives
+      weight: 2
+    - name: 标签
+      url: tags
+      weight: 3
+    - name: 分类
+      url: categories
+      weight: 4
+    - name: 关于  
+      url: about/
+      weight: 5
+
+    
+params:
+  description: "纹波的独立站"
+  author: 纹波
+  # ShowToc: true
+  comments: true
+  DateFormat: "2006-01-02"
+  ShowBreadCrumbs: true  
+  ShowPostNavLinks: true  
+  ShowCodeCopyButtons: true  
+  ShowWordCount: true

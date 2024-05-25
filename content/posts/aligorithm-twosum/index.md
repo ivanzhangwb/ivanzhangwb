@@ -1,7 +1,8 @@
 +++
 title = '算法题记: 双数之和'
 date = 2024-04-07T16:42:43+08:00
-tags = ["Skill","aligorithm"]
+tags = ["skill","aligorithm"]
+categories = ["development"] 
 draft=true
 +++
 

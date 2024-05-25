@@ -1,7 +1,9 @@
 +++
 title = 'AI基建-向量数据库Milvus'
+summary = '本文介绍在AI场景下的基础设施:向量数据库 以及 当前该领域下比较典型的开源产品 Milvus'
 date = 2024-05-22T15:17:45+08:00
 tags = ["aligorithm","AI"] 
+categories = ["development"] 
 +++
 
 &emsp;&emsp;AI热潮之下，对各行各业的影响是深刻且不可阻挡的。   
@@ -60,7 +62,7 @@ tags = ["aligorithm","AI"]
     * 该算法脱胎于归并排序算法的归并阶段，两者**共同点**是归并时结果已经排序，
     * **不同点**是**归并排序是归并两路结果**，**reduce 这里归并多路结果**
     * **对比归并排序时使用两个指针记录两路结果的偏移量，proxy reduce 使用多个指针 locs 记录多路结果的偏移量。**
-  - 相关的设计文档： https://github.com/milvus-io/milvus/blob/f3f46d3bb2dcae2de0bdb7bc0f7b20a72efceaab/docs/developer_guides/proxy-reduce-cn.md
+  - [相关的设计文档](https://github.com/milvus-io/milvus/blob/f3f46d3bb2dcae2de0bdb7bc0f7b20a72efceaab/docs/developer_guides/proxy-reduce-cn.md)
 
 ## 小结
 &emsp;&emsp;关于Milvus的其他知识点，还有很多的内容需要去了解。 包括，其实业内一直把其作为向量数据库来使用，但是在Milvus的2.0版本中，其也支持了纯量数据的精确查询，我记得在某一档播客结果中，他们的创始人提到了，可以使用Milvus直接替换掉类似ES等产品，直接实现非常精确的查询能力。  
@@ -70,4 +72,4 @@ tags = ["aligorithm","AI"]
 &emsp;&emsp;总之，这个产品还有非常的内容值得仔细研究与学习，这里只是一个简要的分享，更多的内容可以在他们的官网上查询到。另外，源代码也是开源的，有时间的情况下，需要好好的读一下对应的代码，了解下其中的细节；
 
 ## 附录
-- [Milvus架构]([Milvus Architecture Overview](https://milvus.io/docs/architecture_overview.md))
+- [Milvus架构](https://milvus.io/docs/architecture_overview.md)

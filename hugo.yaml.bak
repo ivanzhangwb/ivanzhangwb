@@ -1,0 +1,31 @@
+baseURL : http://www.zhangwb.cn
+languageCode : 'zh-cn'
+title : '纹波独立站'
+theme : 'PaperMod'
+enableEmoji : true
+searchHidden: true
+
+menu:
+  main:
+    - name: 搜索
+      url: search/
+      weight: 10
+    - name: 归档
+      url: archives
+      weight: 5
+    - name: 标签
+      url: tags
+      weight: 5
+    - name: 关于  
+      url: about/
+      weight: 10
+
+    
+params:
+  DateFormat: "2006-01-02"
+  comments: true 
+  ShowBreadCrumbs: true  
+  ShowPostNavLinks: true  
+  ShowCodeCopyButtons: true  
+  ShowWordCount: true
+
