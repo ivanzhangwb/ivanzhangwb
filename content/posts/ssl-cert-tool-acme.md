@@ -1,10 +1,9 @@
 +++
-title = "acme.sh 免费证书神器"
-date = "2025-03-25"
+title = '独立开发免费证书神器'
+date = '2025-03-25'
+summary = '独立开发好工具介绍'
 tags = ["SSL"]
 categories = ["Tech"]
-summary = "独立开发好工具介绍"
-description = "免费证书 acme.sh"
 +++
 
 在生产环境中，为网站配置 HTTPS 已经成为标配。本文将介绍如何通过 [`acme.sh`](https://github.com/acmesh-official/acme.sh) 工具，结合阿里云的 DNS API，实现自动化签发和更新免费的 Let's Encrypt 证书，并将其应用到 Nginx 中。

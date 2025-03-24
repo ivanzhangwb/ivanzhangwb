@@ -1,4 +1,4 @@
-baseURL : http://www.zhangwb.cn
+baseURL : https://www.zhangwb.cn
 buildDrafts: false
 title : '纹波独立站'
 theme : 'PaperMod'
