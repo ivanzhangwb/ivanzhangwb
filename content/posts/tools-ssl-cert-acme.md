@@ -6,7 +6,7 @@ tags = ["SSL"]
 categories = ["Tech"]
 +++
 
-在生产环境中，为网站配置 HTTPS 已经成为标配。本文将介绍如何通过 [`acme.sh`](https://github.com/acmesh-official/acme.sh) 工具，结合阿里云的 DNS API，实现自动化签发和更新免费的 Let's Encrypt 证书，并将其应用到 Nginx 中。
+在生产环境中，为网站配置 HTTPS 已经成为标配。本文将介绍如何通过 [acme.sh](https://github.com/acmesh-official/acme.sh) 工具，结合阿里云的 DNS API，实现自动化签发和更新免费的 Let's Encrypt 证书，并将其应用到 Nginx 中。
 
 ## 准备工作
 
